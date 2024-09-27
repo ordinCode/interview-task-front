@@ -1,6 +1,5 @@
 {
   "name": "todolist",
-  "packageManager": "yarn@3.6.1",
   "private": true,
   "scripts": {
     "compile": "tsc || exit 1",
