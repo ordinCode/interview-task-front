@@ -1,6 +1,8 @@
 "use client";
 import React from "react";
 import styled from "@emotion/styled";
+import { sampleMemberState } from "../../state/SampleState";
+import { useRecoilState } from "recoil";
 
 const Container = styled.div`
   padding: 1rem;
@@ -21,6 +23,8 @@ const Description = styled.p``;
 interface Props {}
 
 const BaseballPage = ({}: Props) => {
+  const [sampleMember, setSampleMember] = useRecoilState(sampleMemberState);
+
   return (
     <Container>
       <Title>⚾️ 숫자 야구 게임</Title>
