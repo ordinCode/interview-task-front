@@ -24,7 +24,7 @@ const BaseballPage = ({}: Props) => {
   return (
     <Container>
       <Title>⚾️ 숫자 야구 게임</Title>
-      <Description>1~9가지의 수를 중복없이 3개 입력해주세요.</Description>
+      <Description>1~9까지의 수를 중복없이 3개 입력해주세요.</Description>
       <input type="text" />
       <button>확인</button>
       <SubTitle>📄 결과</SubTitle>
