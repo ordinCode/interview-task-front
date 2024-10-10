@@ -7,9 +7,11 @@ const Container = styled.div``;
 interface Props {}
 
 const TodoUserListPage = ({}: Props) => {
-  return <Container>
-    todo
-  </Container>;
+  return (
+    <Container>
+      <div>todo</div>
+    </Container>
+  );
 };
 
 export default TodoUserListPage;
