@@ -5,4 +5,4 @@
   - 어떤 type, interface가 필요할까요?
   - 어떤 class, function, util, hook이 필요할까요?
 - 개발
-  - 단위 테스크 작성 포함
+  - 단위 테스트 작성 포함
