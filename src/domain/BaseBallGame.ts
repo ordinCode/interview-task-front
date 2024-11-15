@@ -38,6 +38,10 @@ export default class BaseBallGame {
     return this.gameState === "END";
   }
 
+  restartGame(): BaseBallGame {
+    return new BaseBallGame();
+  }
+
   addTryBall(input: string): BaseBallGame {
     const numbers1 = new Numbers(input);
     const baseBallGame = new BaseBallGame(this.gameState, this.answer, [

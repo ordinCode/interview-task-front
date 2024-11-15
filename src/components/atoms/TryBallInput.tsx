@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styled from "@emotion/styled";
-import { useRecoilState } from "recoil";
-import { baseBallGameState } from "../../state/baseBallGameState";
+import { useStoreBaseballGame } from "../../hooks/useStoreBaseballGame";
 
 const Container = styled.div``;
 
@@ -9,14 +8,13 @@ interface Props {}
 
 const TryBallInput = ({}: Props) => {
   const [inputValue, setInputValue] = useState<string>("");
-  const [baseBallGame, setBaseBallGame] = useRecoilState(baseBallGameState);
+  const { baseballGameState, addTry } = useStoreBaseballGame();
 
-  const isEnd = baseBallGame.isEnd();
+  const isEnd = baseballGameState.isEnd();
 
   function submit() {
     try {
-      const newBaseBallGame = baseBallGame.addTryBall(inputValue);
-      setBaseBallGame(newBaseBallGame);
+      addTry(inputValue);
       setInputValue("");
     } catch (e: any) {
       alert(e.message);

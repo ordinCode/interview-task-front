@@ -1,22 +1,15 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { useRecoilState } from "recoil";
-import { baseBallGameState } from "../../state/baseBallGameState";
-import BaseBallGame from "../../domain/BaseBallGame";
+import { useStoreBaseballGame } from "../../hooks/useStoreBaseballGame";
 
 const Container = styled.div``;
 
 interface Props {}
 
 const GameRetryMessage = ({}: Props) => {
-  const [baseBallGame, setBaseBallGame] = useRecoilState(baseBallGameState);
+  const { baseballGameState, restart } = useStoreBaseballGame();
 
-  function restart() {
-    const newBaseballGame = new BaseBallGame();
-    setBaseBallGame(newBaseballGame);
-  }
-
-  if (!baseBallGame.isEnd()) return;
+  if (!baseballGameState.isEnd()) return;
 
   return (
     <Container>
