@@ -2,8 +2,9 @@
 ### 진행 순서
 - 과제 설명 
 - 설계
-  - 어떤 type, interface가 필요할까요?
-  - 어떤 class, function, util, hook이 필요할까요?
+  - 어떤 type 혹은 interface가 필요할까요?
+  - 어떤 컴포넌트가 필요할까요?(각 컴포넌트의 역할과 책임은 무엇일까요?)
+  - 어떤 class 혹은 function 혹은 util 혹은 hook 등이 필요할까요?
 - 개발(코딩)
   - 테스트하기 쉬운 코드
   - 역할과 책임이 분리
